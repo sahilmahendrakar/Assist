@@ -31,7 +31,7 @@ public class Alert {
             SmsManager.getDefault().sendTextMessage(contact2Number, null, message, null, null);
         }
         Intent callIntent = new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse("tel:6034179936"));
+        callIntent.setData(Uri.parse("tel:" + contact1Number));
         callIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         callIntent.addFlags(Intent.FLAG_FROM_BACKGROUND);
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
